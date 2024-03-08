@@ -1,7 +1,8 @@
-<form class="search-user">
+<form (ngSubmit)="onSearchUsername()" class="search-user">
   <div class="search-user__input-container">
     <fa-icon class="search-user__icon" [icon]="faMagnifyingGlass"></fa-icon>
     <input
+      #usernameInput
       type="text"
       name="username"
       id="username"
