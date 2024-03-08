@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid red;
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__theme-switch {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  &__theme-text {
+    margin-right: 0.5rem;
+  }
+}
+
+// responsive styles will be added later
