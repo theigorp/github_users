@@ -50,5 +50,7 @@ input,
 button,
 textarea,
 select {
+  display: block;
+  width: 100%;
   font: inherit;
 }
