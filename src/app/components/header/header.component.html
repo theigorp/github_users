@@ -1,8 +1,8 @@
 <header class="header">
   <h2 class="header__title">finduser</h2>
-  <div class="header__theme-switch">
-    <span class="header__theme-text"></span>
-    <fa-icon [icon]="faMoon"></fa-icon>
-    <fa-icon [icon]="faSun"></fa-icon>
+  <div class="header__theme-switch" (click)="onToggleTheme()">
+    <span class="header__theme-text">{{ themeText }}</span>
+    <fa-icon *ngIf="themeText === 'dark'" [icon]="faMoon"></fa-icon>
+    <fa-icon *ngIf="themeText === 'light'" [icon]="faSun"></fa-icon>
   </div>
 </header>
