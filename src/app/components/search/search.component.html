@@ -1,13 +1,15 @@
 <form class="search-user">
-  <fa-icon class="search-user__icon" [icon]="faMagnifyingGlass"></fa-icon>
-  <input
-    type="text"
-    name="username"
-    id="username"
-    placeholder="Search GitHub username..."
-    class="search-user__input"
-  />
+  <div class="search-user__input-container">
+    <fa-icon class="search-user__icon" [icon]="faMagnifyingGlass"></fa-icon>
+    <input
+      type="text"
+      name="username"
+      id="username"
+      placeholder="Search GitHub username..."
+      class="search-user__input"
+    />
+  </div>
   <fa-icon class="search-user__icon" [icon]="faX"></fa-icon>
   <p class="search-user__error-message">{{ errorMessage }}</p>
-  <button>Search</button>
+  <button class="search-user__submit">Search</button>
 </form>
