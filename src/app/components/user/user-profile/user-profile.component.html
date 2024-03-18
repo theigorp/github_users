@@ -11,7 +11,11 @@
     <p class="user__bio" [ngClass]="{ 'user__bio--no-bio': !user.bio }">
       {{ user.bio ? user.bio : "This profile has no bio" }}
     </p>
-    <!-- profile-stats.component.ts -->
+    <app-profile-stats
+      [repos]="user.public_repos"
+      [followers]="user.followers"
+      [following]="user.following"
+    ></app-profile-stats>
     <!-- profile-socials.component.ts -->
   </div>
 </div>

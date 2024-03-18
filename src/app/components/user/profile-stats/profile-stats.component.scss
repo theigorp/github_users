@@ -1,0 +1,23 @@
+:host {
+  width: 100%;
+}
+
+.stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  background-color: var(--color-accent-light);
+
+  &__col-title {
+    font-size: 0.8rem;
+    color: var(--color-text-normal-light);
+  }
+
+  &__col-value {
+    font-size: 1.4rem;
+    color: var(--color-text-light);
+  }
+}
