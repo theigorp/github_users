@@ -2,6 +2,7 @@ export interface User {
   login: string;
   id: number;
   node_id: string;
+  avatar_url: string;
   gravatar_id: string;
   url: string;
   html_url: string;
@@ -22,6 +23,7 @@ export interface User {
   location: string | null;
   email: string | null;
   hireable: string | null;
+  bio: string | null;
   twitter_username: string | null;
   public_repos: number;
   public_gists: number;
