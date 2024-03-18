@@ -6,6 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { User } from './models/user';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { User } from './models/user';
 })
 export class AppComponent implements OnInit {
   user!: User;
+  requestFailed = false;
 
   // ideally, this logic should be located in user-profile.component.ts where oninit it will
   // get 'theigor' userinfo and display it, and then every subsequent search will trigger new
@@ -36,8 +38,13 @@ export class AppComponent implements OnInit {
   }
 
   onSearch() {
-    this.userService.getRequestedUser().subscribe((user) => {
-      this.user = user;
+    this.userService.getRequestedUser().subscribe({
+      next: (user) => {
+        this.user = user;
+      },
+      error: (error: HttpErrorResponse) => {
+        this.requestFailed = true;
+      },
     });
   }
 }

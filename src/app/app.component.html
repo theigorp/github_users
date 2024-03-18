@@ -1,5 +1,8 @@
 <div class="container">
   <app-header></app-header>
-  <app-search (search)="onSearch()"></app-search>
+  <app-search
+    (search)="onSearch()"
+    [requestFailed]="requestFailed"
+  ></app-search>
   <app-user-profile [user]="user"></app-user-profile>
 </div>
