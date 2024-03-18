@@ -1,0 +1,23 @@
+:host {
+  width: 100%;
+}
+
+.socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  margin-top: 1rem;
+
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-normal-light);
+
+    &--not-available {
+      color: var(--color-text-unavailable-light);
+    }
+  }
+}
