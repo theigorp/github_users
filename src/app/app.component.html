@@ -1,5 +1,5 @@
 <div class="container">
   <app-header></app-header>
-  <app-search></app-search>
-  <app-user-profile></app-user-profile>
+  <app-search (search)="onSearch()"></app-search>
+  <app-user-profile [user]="user"></app-user-profile>
 </div>
