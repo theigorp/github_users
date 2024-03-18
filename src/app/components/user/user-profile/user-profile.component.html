@@ -18,6 +18,11 @@
       [followers]="user.followers"
       [following]="user.following"
     ></app-profile-stats>
-    <app-profile-socials></app-profile-socials>
+    <app-profile-socials
+      [company]="user.company"
+      [location]="user.location"
+      [website]="user.blog"
+      [xHandle]="user.twitter_username"
+    ></app-profile-socials>
   </div>
 </div>
