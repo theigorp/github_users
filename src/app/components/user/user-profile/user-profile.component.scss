@@ -35,6 +35,11 @@
 
   &__username {
     color: var(--color-action-blue);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__bio {

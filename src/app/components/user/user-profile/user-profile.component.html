@@ -7,7 +7,9 @@
       <h2 class="user__name">{{ user.name ? user.name : "no name" }}</h2>
       <p class="user__join-date">{{ user.created_at | date }}</p>
     </div>
-    <p class="user__username">&commat;{{ user.login }}</p>
+    <a [href]="user.html_url" target="_blank" class="user__username"
+      >&commat;{{ user.login }}</a
+    >
     <p class="user__bio" [ngClass]="{ 'user__bio--no-bio': !user.bio }">
       {{ user.bio ? user.bio : "This profile has no bio" }}
     </p>
