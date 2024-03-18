@@ -10,7 +10,11 @@
       class="search-user__input"
     />
   </div>
-  <fa-icon class="search-user__icon" [icon]="faX"></fa-icon>
+  <fa-icon
+    (click)="onClearUsername()"
+    class="search-user__icon"
+    [icon]="faX"
+  ></fa-icon>
   <p class="search-user__error-message">{{ errorMessage }}</p>
   <button class="search-user__submit">Search</button>
 </form>

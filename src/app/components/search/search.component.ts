@@ -32,4 +32,8 @@ export class SearchComponent {
     this.userService.setRequestedUser(searchedUsername);
     this.search.emit();
   }
+
+  onClearUsername() {
+    this.usernameInputRef.nativeElement.value = '';
+  }
 }
