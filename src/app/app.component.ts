@@ -1,12 +1,13 @@
 import { UserService } from './services/user.service';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { ActivatedRoute, Params, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { User } from './models/user';
 import { HttpErrorResponse } from '@angular/common/http';
+import { mergeMap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -29,11 +30,20 @@ export class AppComponent implements OnInit {
   // get 'theigor' userinfo and display it, and then every subsequent search will trigger new
   // request. But for now, I chose to go with emitting the search event and passing props
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.userService.getRequestedUser().subscribe((user) => {
-      this.user = user;
+    this.route.queryParams.subscribe((params: Params) => {
+      const searchedUsername = params['username'];
+      if (searchedUsername) {
+        this.userService.setRequestedUser(searchedUsername);
+      }
+      this.userService.getRequestedUser().subscribe((user) => {
+        this.user = user;
+      });
     });
   }
 
