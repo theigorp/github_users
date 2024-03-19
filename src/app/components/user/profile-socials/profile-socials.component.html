@@ -1,7 +1,7 @@
 <div class="socials">
   <div
     class="socials__link"
-    [ngClass]="{ 'socials__link--not-available': !xHandle }"
+    [ngClass]="{ 'socials__link--not-available': !location }"
   >
     <fa-icon class="search-user__icon" [icon]="faLocation"></fa-icon>
     <span>{{ location ? location : "Not Available" }}</span>
@@ -15,14 +15,14 @@
   </div>
   <div
     class="socials__link"
-    [ngClass]="{ 'socials__link--not-available': !xHandle }"
+    [ngClass]="{ 'socials__link--not-available': !website }"
   >
     <fa-icon class="search-user__icon" [icon]="faWebsite"></fa-icon>
     <span>{{ website ? website : "Not Available" }}</span>
   </div>
   <div
     class="socials__link"
-    [ngClass]="{ 'socials__link--not-available': !xHandle }"
+    [ngClass]="{ 'socials__link--not-available': !company }"
   >
     <fa-icon class="search-user__icon" [icon]="faCompany"></fa-icon>
     <span>{{ company ? company : "Not Available" }}</span>
