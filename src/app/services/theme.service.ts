@@ -10,9 +10,9 @@ export class ThemeService {
   setTheme(theme: 'light' | 'dark') {
     this.theme = theme;
     if (this.theme === 'light') {
-      this.renderer.removeClass(document.body, 'dark');
+      this.renderer.setAttribute(document.body, 'data-theme', 'light');
     } else {
-      this.renderer.addClass(document.body, 'dark');
+      this.renderer.setAttribute(document.body, 'data-theme', 'dark');
     }
   }
 
