@@ -15,9 +15,14 @@
 
   --color-accent-dark: #141d2f;
   --color-bg-dark: #1d2a47;
-  --color-icon-unavailable-dark: #344a71;
-  --color-text-unavailable-dark: #8b91a0;
+  --color-text-unavailable-dark: #344a71;
   --color-text-normal-dark: #fefefe;
+
+  --component-color: var(--color-bg-light);
+  --component-color-secondary: var(--color-accent-light);
+  --text-color: var(--color-text-light);
+  --text-color-secondary: var(--color-text-normal-light);
+  --text-color-secondary-unavailable: var(--color-text-unavailable-light);
 }
 
 *,
@@ -36,9 +41,16 @@ body {
   font-weight: 400;
   font-style: normal;
   line-height: 1.5;
-  background-color: var(--color-accent-light); // this isn't working
-  background-color: #f5f8fe;
-  // options for dark theme will be added later
+  background-color: var(--color-accent-light);
+
+  &[data-theme="dark"] {
+    background-color: var(--color-accent-dark);
+    --component-color: var(--color-bg-dark);
+    --component-color-secondary: var(--color-accent-dark);
+    --text-color: var(--color-text-dark);
+    --text-color-secondary: var(--color-text-normal-dark);
+    --text-color-secondary-unavailable: var(--color-text-unavailable-dark);
+  }
 }
 
 img,

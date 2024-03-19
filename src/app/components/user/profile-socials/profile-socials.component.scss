@@ -14,10 +14,10 @@
     justify-content: flex-start;
     align-items: center;
     gap: 0.5rem;
-    color: var(--color-text-normal-light);
+    color: var(--text-color-secondary);
 
     &--not-available {
-      color: var(--color-text-unavailable-light);
+      color: var(--text-color-secondary-unavailable);
     }
   }
 }

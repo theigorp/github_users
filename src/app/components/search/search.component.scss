@@ -4,7 +4,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
-  background-color: var(--color-bg-light);
+  background-color: var(--component-color);
   border-radius: 0.5rem;
 
   &__input-container {
@@ -19,9 +19,13 @@
     border: none;
     outline: none;
     background-color: inherit;
-    color: var(--color-text-light);
+    color: var(--text-color);
     font-size: 1.1rem;
     padding: 0.5rem;
+
+    &::placeholder {
+      color: var(--text-color);
+    }
   }
 
   &__input-control {

@@ -5,7 +5,7 @@
   padding: 2.5rem;
   margin-top: 2rem;
   border-radius: 0.5rem;
-  background-color: var(--color-bg-light);
+  background-color: var(--component-color);
 
   &__profile-image img {
     border-radius: 50%;
@@ -26,7 +26,7 @@
 
   &__name {
     line-height: 0.5;
-    color: var(--color-text-light);
+    color: var(--text-color);
   }
 
   &__join-date {
@@ -47,7 +47,7 @@
     color: var(--color-text-normal-light);
 
     &--no-bio {
-      color: var(--color-text-unavailable-light);
+      color: var(--text-color-secondary-unavailable);
     }
   }
 }

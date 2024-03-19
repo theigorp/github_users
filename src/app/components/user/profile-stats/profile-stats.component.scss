@@ -8,15 +8,16 @@
   align-items: center;
   padding: 1rem;
   border-radius: 1.25rem;
-  background-color: var(--color-accent-light);
+  background-color: var(--component-color-secondary);
 
   &__col-title {
     font-size: 0.8rem;
-    color: var(--color-text-normal-light);
+    color: var(--text-color);
   }
 
   &__col-value {
     font-size: 1.4rem;
-    color: var(--color-text-light);
+    font-weight: lighter;
+    color: var(--text-color);
   }
 }
