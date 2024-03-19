@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import { ThemeService } from '../../theme.service';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
