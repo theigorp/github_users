@@ -8,6 +8,10 @@
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
 
+  @media (max-width: 375px) {
+    font-size: 0.9rem;
+  }
+
   &__input-container {
     display: flex;
     justify-content: flex-start;
@@ -27,6 +31,11 @@
     &::placeholder {
       color: var(--text-color);
     }
+
+    @media (max-width: 375px) {
+      font-size: 0.9rem;
+      text-overflow: ellipsis;
+    }
   }
 
   &__input-control {
@@ -40,6 +49,11 @@
     font-size: 0.75rem;
     color: var(--color-text-error);
     white-space: nowrap;
+
+    @media (max-width: 375px) {
+      font-size: 0.65rem;
+      padding-bottom: 0;
+    }
   }
 
   &__submit {
@@ -55,9 +69,17 @@
     &:hover {
       opacity: 0.7;
     }
+
+    @media (max-width: 375px) {
+      padding: 0.25rem 0.75rem;
+    }
   }
 
   &__icon {
     color: var(--color-action-blue);
+
+    @media (max-width: 375px) {
+      font-size: 1.75rem;
+    }
   }
 }

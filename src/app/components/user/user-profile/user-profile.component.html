@@ -1,15 +1,19 @@
 <div *ngIf="user" class="user">
-  <div class="user__profile-image">
-    <img [src]="user.avatar_url" alt="user profile picture" />
-  </div>
-  <div class="user__details">
-    <div class="user__info">
-      <h2 class="user__name">{{ user.name ? user.name : "no name" }}</h2>
+  <div class="user__info">
+    <div class="user__profile-image">
+      <img [src]="user.avatar_url" alt="user profile picture" />
+    </div>
+    <div class="user__identity">
+      <div class="user__identity-names">
+        <h2 class="user__name">{{ user.name ? user.name : "no name" }}</h2>
+        <a [href]="user.html_url" target="_blank" class="user__username">
+          &commat;{{ user.login }}</a
+        >
+      </div>
       <p class="user__join-date">{{ user.created_at | date }}</p>
     </div>
-    <a [href]="user.html_url" target="_blank" class="user__username"
-      >&commat;{{ user.login }}</a
-    >
+  </div>
+  <div class="user__details">
     <p class="user__bio" [ngClass]="{ 'user__bio--no-bio': !user.bio }">
       {{ user.bio ? user.bio : "This profile has no bio" }}
     </p>

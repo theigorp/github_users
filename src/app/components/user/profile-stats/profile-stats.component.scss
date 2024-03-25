@@ -11,6 +11,10 @@
   background-color: var(--component-color-secondary);
   transition: all 0.2s ease-in-out;
 
+  @media (max-width: 375px) {
+    padding: 0.5rem 1rem;
+  }
+
   &__col-title {
     font-size: 0.8rem;
     color: var(--text-color);
