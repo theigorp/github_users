@@ -9,6 +9,7 @@
   padding: 1rem;
   border-radius: 1.25rem;
   background-color: var(--component-color-secondary);
+  transition: all 0.2s ease-in-out;
 
   &__col-title {
     font-size: 0.8rem;

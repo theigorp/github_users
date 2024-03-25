@@ -6,6 +6,7 @@
   padding: 0.5rem;
   background-color: var(--component-color);
   border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
 
   &__input-container {
     display: flex;

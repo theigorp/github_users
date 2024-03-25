@@ -42,6 +42,7 @@ body {
   font-style: normal;
   line-height: 1.5;
   background-color: var(--color-accent-light);
+  transition: all 0.2s ease-in-out;
 
   &[data-theme="dark"] {
     background-color: var(--color-accent-dark);

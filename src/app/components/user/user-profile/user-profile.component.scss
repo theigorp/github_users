@@ -6,6 +6,7 @@
   margin-top: 2rem;
   border-radius: 0.5rem;
   background-color: var(--component-color);
+  transition: all 0.2s ease-in-out;
 
   &__profile-image img {
     border-radius: 50%;
