@@ -19,9 +19,21 @@
     align-items: center;
     gap: 0.5rem;
     color: var(--text-color-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     &--not-available {
       color: var(--text-color-secondary-unavailable);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

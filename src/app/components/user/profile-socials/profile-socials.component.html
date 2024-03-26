@@ -12,14 +12,18 @@
     [ngClass]="{ 'socials__link--not-available': !xHandle }"
   >
     <fa-icon class="search-user__icon" [icon]="faTwitter"></fa-icon>
-    <span>{{ xHandle ? xHandle : "Not Available" }}</span>
+    <a [href]="'https://twitter.com/' + xHandle" target="_blank">{{
+      xHandle ? xHandle : "Not Available"
+    }}</a>
   </div>
   <div
     class="socials__link"
     [ngClass]="{ 'socials__link--not-available': !website }"
   >
     <fa-icon class="search-user__icon" [icon]="faWebsite"></fa-icon>
-    <span>{{ website ? website : "Not Available" }}</span>
+    <a [href]="website" target="_blank">{{
+      website ? website : "Not Available"
+    }}</a>
   </div>
   <div
     class="socials__link"
