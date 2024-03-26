@@ -8,12 +8,12 @@
   border-radius: 0.5rem;
   transition: all 0.2s ease-in-out;
 
-  @media (max-width: 375px) {
-    font-size: 0.9rem;
+  @media (max-width: 700px) {
+    font-size: 1rem;
   }
 
-  @media (max-width: 700px) {
-    font-size: 1.1rem;
+  @media (max-width: 375px) {
+    font-size: 0.9rem;
   }
 
   &__input-container {
@@ -36,13 +36,13 @@
       color: var(--text-color);
     }
 
-    @media (max-width: 375px) {
-      font-size: 0.9rem;
+    @media (max-width: 700px) {
+      font-size: 1rem;
       text-overflow: ellipsis;
     }
 
-    @media (max-width: 700px) {
-      font-size: 1.1rem;
+    @media (max-width: 375px) {
+      font-size: 0.9rem;
       text-overflow: ellipsis;
     }
   }
@@ -87,11 +87,11 @@
   &__icon {
     color: var(--color-action-blue);
 
-    @media (max-width: 375px) {
+    @media (max-width: 700px) {
       font-size: 1.75rem;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 375px) {
       font-size: 1.75rem;
     }
   }
