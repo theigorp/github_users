@@ -12,6 +12,10 @@
     font-size: 0.9rem;
   }
 
+  @media (max-width: 600px) {
+    font-size: 1.1rem;
+  }
+
   &__input-container {
     display: flex;
     justify-content: flex-start;
@@ -34,6 +38,11 @@
 
     @media (max-width: 375px) {
       font-size: 0.9rem;
+      text-overflow: ellipsis;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 1.1rem;
       text-overflow: ellipsis;
     }
   }
@@ -79,6 +88,10 @@
     color: var(--color-action-blue);
 
     @media (max-width: 375px) {
+      font-size: 1.75rem;
+    }
+
+    @media (max-width: 600px) {
       font-size: 1.75rem;
     }
   }
