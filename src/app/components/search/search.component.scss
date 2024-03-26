@@ -43,7 +43,6 @@
 
     @media (max-width: 375px) {
       font-size: 0.9rem;
-      text-overflow: ellipsis;
     }
   }
 
@@ -88,10 +87,6 @@
     color: var(--color-action-blue);
 
     @media (max-width: 700px) {
-      font-size: 1.75rem;
-    }
-
-    @media (max-width: 375px) {
       font-size: 1.75rem;
     }
   }
